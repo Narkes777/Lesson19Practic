@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enclosure list</title>
+</head>
+<body>
+    <h1>Enclosure List</h1>
+    {% for enclosure in enclosure_list %}
+    <p>{{ enclosure.name }}</p>
+    <p>{{ enclosure.capacity}}</p>
+    <p>{{ enclosure.animals }}</p>
+    {% endfor %}
+</body>
+</html>

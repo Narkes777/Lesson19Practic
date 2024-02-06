@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     # local
     'ads',
-    'new_app'
+    'new_app',
+    'folder'
 ]
 
 MIDDLEWARE = [
