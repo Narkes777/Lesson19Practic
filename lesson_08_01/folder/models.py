@@ -13,3 +13,17 @@ class Enclosure(models.Model):
     name = models.CharField(max_length=50)
     capacity = models.IntegerField()
     animals = models.ManyToManyField('Animal')
+
+
+class Car(models.Model):
+    manufacturer = models.CharField(max_length=50)
+    model = models.CharField(max_length=50, null=True, blank=True)
+    year = models.IntegerField()
+    price = models.IntegerField()
+    availability = models.BooleanField()
+
+class Client(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(unique=True, null=True, blank=True)
+    purchased_cars = models.ManyToManyField(Car)
+
